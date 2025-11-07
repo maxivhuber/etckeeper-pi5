@@ -1,0 +1,17 @@
+[connection]
+id=preconfigured
+uuid=5ba377ca-2f07-4352-ad69-aa7375ebf8c6
+type=wifi
+[wifi]
+mode=infrastructure
+ssid=FRITZ!Box_HT_5
+hidden=false
+[ipv4]
+method=auto
+[ipv6]
+addr-gen-mode=default
+method=auto
+[proxy]
+[wifi-security]
+key-mgmt=wpa-psk
+psk=338d647637da03f1273877b0a8d2d91eb3eb4420fac717cbb6159b5fbfcf1cfe
