@@ -30,9 +30,9 @@ Include /etc/ssh/sshd_config.d/*.conf
 # Authentication:
 
 #LoginGraceTime 2m
-#PermitRootLogin prohibit-password
+PermitRootLogin no
 #StrictModes yes
-#MaxAuthTries 6
+MaxAuthTries 3
 #MaxSessions 10
 
 #PubkeyAuthentication yes
@@ -54,7 +54,7 @@ Include /etc/ssh/sshd_config.d/*.conf
 #IgnoreRhosts yes
 
 # To disable tunneled clear text passwords, change to "no" here!
-#PasswordAuthentication yes
+PasswordAuthentication no
 #PermitEmptyPasswords no
 
 # Change to "yes" to enable keyboard-interactive authentication.  Depending on
@@ -89,7 +89,7 @@ UsePAM yes
 #AllowAgentForwarding yes
 #AllowTcpForwarding yes
 #GatewayPorts no
-X11Forwarding yes
+X11Forwarding no
 #X11DisplayOffset 10
 #X11UseLocalhost yes
 #PermitTTY yes
@@ -122,3 +122,15 @@ Subsystem	sftp	/usr/lib/openssh/sftp-server
 #	AllowTcpForwarding no
 #	PermitTTY no
 #	ForceCommand cvs server
+
+# Ciphers: Use only AEAD ciphers (Authenticated Encryption)
+Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com
+
+# Host key algorithms: Modern and secure (Ed25519 + RSA-SHA2)
+HostKeyAlgorithms ssh-ed25519,rsa-sha2-512,rsa-sha2-256
+
+# Key exchange algorithms: Post-quantum hybrid + strong elliptic curve + large classical group
+KexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,diffie-hellman-group16-sha512
+
+# MAC algorithms: Encrypt-then-MAC for non-AEAD fallback
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com
