@@ -32,7 +32,7 @@ Include /etc/ssh/sshd_config.d/*.conf
 #LoginGraceTime 2m
 PermitRootLogin no
 #StrictModes yes
-MaxAuthTries 5
+MaxAuthTries 3
 #MaxSessions 10
 
 #PubkeyAuthentication yes
@@ -54,7 +54,7 @@ MaxAuthTries 5
 #IgnoreRhosts yes
 
 # To disable tunneled clear text passwords, change to "no" here!
-PasswordAuthentication yes
+PasswordAuthentication no
 #PermitEmptyPasswords no
 
 # Change to "yes" to enable keyboard-interactive authentication.  Depending on
