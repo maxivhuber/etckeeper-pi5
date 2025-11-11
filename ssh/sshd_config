@@ -32,7 +32,7 @@ Include /etc/ssh/sshd_config.d/*.conf
 #LoginGraceTime 2m
 PermitRootLogin no
 #StrictModes yes
-MaxAuthTries 3
+MaxAuthTries 5
 #MaxSessions 10
 
 #PubkeyAuthentication yes
