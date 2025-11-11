@@ -44,7 +44,6 @@ sgx:!*::
 clock:!*::
 kvm:!*::
 render:!*::max
-pi:!::
 systemd-timesync:!*::
 messagebus:!*::
 _ssh:!::
@@ -55,3 +54,4 @@ polkitd:!*::
 spi:!::max
 i2c:!::max
 gpio:!::max
+max:!::

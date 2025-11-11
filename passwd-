@@ -24,4 +24,4 @@ sshd:x:989:65534:sshd user:/run/sshd:/usr/sbin/nologin
 avahi:x:101:103:Avahi mDNS daemon:/run/avahi-daemon:/usr/sbin/nologin
 polkitd:x:988:988:User for polkitd:/:/usr/sbin/nologin
 dnsmasq:x:999:65534:dnsmasq:/var/lib/misc:/usr/sbin/nologin
-max:x:1000:1000::/home/pi:/bin/bash
+max:x:1000:1000::/home/max:/bin/bash
