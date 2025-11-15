@@ -1,0 +1,21 @@
+# msmtp configuration for Mailgun (EU region)
+#
+# SETUP INSTRUCTIONS:
+# 1. Replace placeholders below with your actual values
+# 2. Save as /etc/msmtprc
+# 3. Set permissions: sudo chmod 600 /etc/msmtprc
+
+defaults
+tls on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+logfile /var/log/msmtp.log
+
+account mailgun
+host smtp.eu.mailgun.org
+port 587
+auth on
+user SMTP_USER@YOUR_SENDING_DOMAIN
+password YOUR_MAILGUN_SMTP_PASSWORD
+from SENDER@YOUR_SENDING_DOMAIN
+
+account default : mailgun
