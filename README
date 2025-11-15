@@ -1,0 +1,31 @@
+README for /etc etckeeper repo
+==============================
+
+This file lists key local configuration files and changes.
+
+---
+
+### SSH
+*   /etc/ssh/sshd_config  
+    - Custom settings for remote access and hardening.
+
+### Sudo
+*   /etc/sudoers  
+    - Configures SSH_AUTH_SOCK to pass user SSH agent keys to root.
+
+*   /etc/sudoers.d/010_pi-passwd  
+    - User-specific sudo settings for the "pi" account.
+
+### Firewall
+*   /etc/nftables.conf  
+    - Custom nftables ruleset for network filtering.
+
+### Mail / Monitoring
+*   /etc/msmtprc.template  
+    - Base configuration for msmtp (SMTP client authentication and relay settings).
+
+*   /etc/smartd.conf  
+    - Used for SMART disk monitoring and email alerts.  
+      Packages used:  
+        - `msmtp` and `msmtp-mta` — provide a sendmail-compatible SMTP relay.  
+        - `bsd-mailx` — provides the `mail` command that uses sendmail under the hood.
