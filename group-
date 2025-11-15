@@ -56,3 +56,4 @@ i2c:x:987:max
 gpio:x:986:max
 max:x:1000:
 uuidd:x:105:
+msmtp:x:106:

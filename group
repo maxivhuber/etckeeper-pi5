@@ -57,3 +57,4 @@ gpio:x:986:max
 max:x:1000:
 uuidd:x:105:
 msmtp:x:106:
+docker:x:985:
