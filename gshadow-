@@ -55,3 +55,4 @@ spi:!::max
 i2c:!::max
 gpio:!::max
 max:!::
+uuidd:!::
